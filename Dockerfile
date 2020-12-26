@@ -36,4 +36,5 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-CMD ["while true; do sleep 1; done"]
+COPY entrypoint.sh /
+CMD ["/entrypoint.sh"]
