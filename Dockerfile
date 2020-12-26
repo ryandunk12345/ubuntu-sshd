@@ -36,4 +36,4 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd -D"]
+CMD ["/usr/sbin/sshd","-De"]
