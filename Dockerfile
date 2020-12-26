@@ -16,6 +16,7 @@ RUN sed -i 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN sed -i 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 RUN mkdir /root/.ssh
+RUN mkdir -p /var/run/sshd 
 
 # s6 install and config
 #COPY bin/* /usr/bin/
