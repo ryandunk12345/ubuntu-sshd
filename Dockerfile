@@ -3,15 +3,9 @@ LABEL maintainer="Ryan Duncan"
 
 # Install system requirements
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    emacs25-nox \
     locales \
     openssh-server \
     pwgen \
-    tmux \
-    tzdata \
-    xterm && \
-    apt-get autoremove -y && \
-    apt-get clean
 
 # Configure locales and timezone
 RUN locale-gen en_US.UTF-8 en_GB.UTF-8 fr_CH.UTF-8 && \
@@ -25,10 +19,10 @@ RUN mkdir /var/run/sshd && \
     mkdir /root/.ssh
 
 # s6 install and config
-COPY bin/* /usr/bin/
-COPY configs/etc/s6 /etc/s6/
-RUN chmod a+x /usr/bin/s6-* && \
-    chmod a+x /etc/s6/.s6-svscan/finish /etc/s6/sshd/run /etc/s6/sshd/finish
+#COPY bin/* /usr/bin/
+#COPY configs/etc/s6 /etc/s6/
+#RUN chmod a+x /usr/bin/s6-* && \
+#    chmod a+x /etc/s6/.s6-svscan/finish /etc/s6/sshd/run /etc/s6/sshd/finish
 
 # install setup scripts
 COPY scripts/* /opt/
