@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# run an addon setup script
+if [ -f "/opt/setupbefore.sh" ]; then
+    /opt/setupbefore.sh
+fi
+
+# setup users
+/opt/setupusers.sh
+
+# run an addon setup script
+if [ -f "/opt/setupafter.sh" ]; then
+    /opt/setupafter.sh
+fi
+
+# start sshd
+/usr/sbin/sshd -D
