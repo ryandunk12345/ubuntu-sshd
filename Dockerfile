@@ -36,4 +36,4 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-CMD ["/usr/bin/s6-svscan", "/etc/s6"]
+CMD [""]
