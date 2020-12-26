@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #    cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
 #    echo "Europe/Zurich" > /etc/timezone
 
-RUN mkdir -p /var/run/sshd && \
-    sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
+RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
     sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config && \
     sed -ri 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && \
     mkdir /root/.ssh
