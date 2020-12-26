@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pwgen \
 
 # Configure locales and timezone
-RUN locale-gen en_US.UTF-8 en_GB.UTF-8 fr_CH.UTF-8 && \
-    cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
-    echo "Europe/Zurich" > /etc/timezone
+#RUN locale-gen en_US.UTF-8 en_GB.UTF-8 fr_CH.UTF-8 && \
+#    cp /usr/share/zoneinfo/Europe/Zurich /etc/localtime && \
+#    echo "Europe/Zurich" > /etc/timezone
 
 RUN mkdir /var/run/sshd && \
     sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
