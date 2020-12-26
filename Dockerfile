@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-LABEL maintainer="Christophe Burki, christophe.burki@protonmail.ch"
+LABEL maintainer="Ryan Duncan"
 
 # Install system requirements
 RUN apt-get update && apt-get install -y --no-install-recommends \

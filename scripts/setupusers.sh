@@ -1,5 +1,8 @@
 #!/bin/bash
 
+SSH_PASSWORD="root"
+SSH_USER="root"
+
 USER_STATUS_FILE=/opt/setupuser.status
 
 if [ -f ${USER_STATUS_FILE} ]; then
