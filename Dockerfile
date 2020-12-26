@@ -37,6 +37,4 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-RUN cat /etc/ssh/sshd_config 
-
-CMD ["/usr/sbin/sshd","-De"]
+CMD ["entrypoint.sh"]
