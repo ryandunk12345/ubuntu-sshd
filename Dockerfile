@@ -36,5 +36,4 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-COPY entrypoint.sh /
-CMD ["/entrypoint.sh"]
+CMD ["/usr/sbin/sshd -D"]
