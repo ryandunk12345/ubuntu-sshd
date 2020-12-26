@@ -5,7 +5,7 @@ LABEL maintainer="Ryan Duncan"
 RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
     openssh-server \
-    pwgen \
+    pwgen 
 
 # Configure locales and timezone
 #RUN locale-gen en_US.UTF-8 en_GB.UTF-8 fr_CH.UTF-8 && \
