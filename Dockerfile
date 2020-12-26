@@ -1,6 +1,8 @@
 FROM ubuntu:bionic
 LABEL maintainer="Ryan Duncan"
 
+RUN echo "root:root" | chpasswd
+
 # Install system requirements
 RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
