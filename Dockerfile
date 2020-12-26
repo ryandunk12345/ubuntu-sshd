@@ -36,4 +36,4 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 
 EXPOSE 22
 
-CMD ["ls"]
+CMD ["while true; do sleep 1; done"]
