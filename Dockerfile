@@ -38,6 +38,7 @@ RUN echo 'PAGER=less' >> /root/.bashrc && \
 EXPOSE 22
 
 COPY ./entrypoint.sh /sbin
-RUN chmod +x /sbin/entrypoint.sh
+RUN ["chmod", "+x", "/sbin/entrypoint.sh"]
 
-ENTRYPOINT ["entrypoint.sh"]
+
+ENTRYPOINT ["sh","entrypoint.sh"]
