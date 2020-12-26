@@ -41,4 +41,4 @@ COPY ./entrypoint.sh /sbin
 RUN ["chmod", "+x", "/sbin/entrypoint.sh"]
 
 
-ENTRYPOINT ["sh","entrypoint.sh"]
+ENTRYPOINT ["sh","/sbin/entrypoint.sh"]
